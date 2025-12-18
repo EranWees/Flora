@@ -1,0 +1,5 @@
+{
+  "name": "FLORA 1",
+  "description": "A node-based AI visualizer that grows visual systems from a single seed frame. Explore poses, angles, and treatments efficiently.",
+  "requestFramePermissions": []
+}
