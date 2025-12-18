@@ -39,28 +39,18 @@
   "imports": {
     "react": "https://esm.sh/react@^19.2.3",
     "react/": "https://esm.sh/react@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
-    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
   }
 }
-</script>
-<!-- Babel Standalone for in-browser compilation -->
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<!-- Polyfill process.env for Netlify API Key support -->
-<script>
-  window.process = {
-    env: {
-      NODE_ENV: 'development',
-      // If a Netlify build script injects the key, it typically replaces the string logic or is accessed here.
-      // For this static setup, we initialize the object to prevent runtime errors.
-      API_KEY: '' 
-    }
-  };
 </script>
 </head>
   <body>
     <div id="root"></div>
-    <script type="text/babel" data-presets="env,react,typescript" data-type="module" src="./index.tsx"></script>
+    <!-- Vite entry point -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
